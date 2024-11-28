@@ -1,0 +1,236 @@
+body {
+  background-color: #101021;
+  color: white;
+}
+.area-container {
+  display: grid;
+  grid-template-columns: 1100px 1fr;
+  
+  
+}
+.contenteimage {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 68px;
+  left: 40px;
+}
+.statistics {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+}
+
+/* .iconcontainer {    
+    width: 300px;
+    height: auto;
+    color: gold;
+    background-color: yellow;
+    font-weight: bold;
+    position: relative;  
+} */
+/* .power {
+    display: grid;
+    grid-template-columns: repeat(7,1fr) ;
+    column-gap: 10px;
+   
+} */
+/* .imgteam {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1px;
+    place-items: center;
+    place-content: center;
+} */
+.stadium {
+  display: flex;
+  justify-content: center;
+}
+.switchedimage:hover {
+  /* box-shadow : 2px 2px 4px rgb(205, 187, 187) ;  */
+  filter: drop-shadow(0 2px 13px rgba(182, 152, 152, 0.51))
+    drop-shadow(0 -2px 5px rgba(201, 174, 174, 0.485));
+}
+.erea {
+    /* margin: 0 auto; */
+  background-color: green;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+ 
+  /* box-sizing: border-box; */
+  display: grid;
+
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(4,1fr);
+  width: 1030px;
+  grid-template-areas:
+    "b rf stb  st sta lf mon"
+      "LW    ko cmfr  cmfc cmfl cmfb1  RW"
+    "lb     cbc cba    cb1  cbb  jrb RB"
+    "hj jh gk1 gk1 gk1 lo rjb";
+}
+
+.rb,
+.lwf,
+.cmf1,
+.cb2,
+.cb1,
+.cmf2,
+.cmf3,
+.gk,
+.rwf,
+.lb,
+.st {
+  position: relative;
+  margin: 0 auto;
+}
+#position {
+  text-align: center;
+  background-color: #374d4a;
+  display: inline-block;
+  
+  border-radius: 70%;
+  box-shadow: 0px 5px 6px black;
+  font-weight: bold;
+}
+
+
+.plusicon {
+  position: absolute;
+  top: 100px;
+  left: 60px;
+  width: 100%;
+}
+#changesimg {
+  position: relative;
+}
+
+.changes {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.changes > * {
+  justify-self: center;
+}
+
+.erea img:hover {
+  filter: drop-shadow(0 -5px 7px rgba(184, 241, 210, 0.96))
+    drop-shadow(0 8px 5px rgba(199, 224, 247, 0.575));
+}
+.gk {
+text-align: center;
+  grid-area: gk1;
+  height: 20
+  px;
+
+}
+
+.cb1 {
+  grid-area: cba;
+  width: 150px;
+
+}
+.cb2 {
+  grid-area: cbb;
+  width: 150px;
+
+}
+.rb {
+  grid-area: rb;
+  width: 150px;
+
+}
+.lb {
+  grid-area: lb;
+  width: 150px;
+  }
+.cmf1 {
+  grid-area: cmfa;
+  width: 150px;
+}
+.cmf2 {
+  grid-area: cmfb;
+  width: 150px;
+
+}
+.cmf3 {
+  grid-area: cmfc;
+  width: 150px;
+
+}
+.rwf {
+  grid-area: rwf;
+  width: 150px;
+
+}
+.lwf {
+  grid-area: lwf;
+  width: 150px;
+
+}
+.st {
+  grid-area: st;
+  width: 150px;
+
+}
+
+.imageinfocontainer {
+  position: relative; /* Ensures children position relative to this */
+}
+
+.mainimage {
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+}
+  /* padding-bottom: 20px;
+}
+/*/ 
+.cardimage {
+    width: 6.5em;
+}
+
+.playerimage {
+  position: absolute;
+  top: 34px;
+  left: 38px;
+  width: 70%;
+  border-radius: 50%;
+}
+.addplayertoteam {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.allinfoplayer {
+  color: gold;
+}
+
+.playerpower {
+  position: absolute;
+  top: 44px;
+  left: 21px;
+}
+
+.statistics {
+  display: flex;
+  font-size: bold;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 135px;
+  left: 18px;
+}
+
+.kamalimage {
+  display: flex;
+  justify-content: center;
+width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
+.kamal {
+  width: 45px;
+  height: 45px;
+}
