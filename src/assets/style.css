@@ -8,6 +8,24 @@ body {
 .close-icon:hover {
   color: red;
 }
+.input {
+  background-color: white;
+  color: black;
+}
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+  margin: 5px 20px;
+  width: 60%;
+
+}
+select {
+  display: block;
+  border: 1px solid black;
+  margin: 5px 20px ;
+  width: 60%;
+}
 .area-container {
   display: grid;
   grid-template-columns: 1fr  400px;

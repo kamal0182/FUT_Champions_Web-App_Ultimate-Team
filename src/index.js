@@ -66,8 +66,8 @@ function gettactic() {
     }
             cbleft.children[1].innerHTML = cbleft.style.gridArea.slice(0,2).toUpperCase()
             cbright.children[1].innerHTML = cbright.style.gridArea.slice(0,2).toUpperCase()
-            rb.children[1].innerHTML = rb.style.gridArea
-            lb.children[1].innerHTML = lb.style.gridArea
+            rb.children[1].innerHTML = rb.style.gridArea.slice(0,2).toUpperCase()
+            lb.children[1].innerHTML = lb.style.gridArea.slice(0,2).toUpperCase()
             cmright.children[1].innerHTML = cmright.style.gridArea.slice(0,2).toUpperCase()
             cmcnter.children[1].innerHTML = cmcnter.style.gridArea.slice(0,2).toUpperCase()
             leftcenter.children[1].innerHTML = leftcenter.style.gridArea.slice(0,2).toUpperCase()
@@ -303,7 +303,7 @@ function showmoreinfo(item){
     console.log("kamal")
     console.log(item.parentElement.children[2].children[1].children[0].innerHTML )
     
-        console.log("aksdfasfas'")
+        
         for(let ele of infoarray){
             
        
@@ -340,7 +340,7 @@ function showmoreinfo(item){
             <p>${ele.shooting || ele.handling}</p>
             <p>${ele.passing ||ele.kicking}</p>
             <p>${ele.dribbling ||ele.reflexes}</p>
-            <p>${ele.defending ||ele.speed}</p>
+            <p>${ele.defending || ele.speed} </p>
             <p>${ele.positioning || ele.physical}</p>
 
             </div>
@@ -357,5 +357,72 @@ function close1(){
     document.querySelector(".eria-info").style.display = "none"
     document.querySelector(".inputs-info").style.display = "block"
 }
+function position() {
+    if(document.getElementById("positionshowsed").value == "GK"){
+        let positongk = `   
+                    
+                          
+                        <label for="Diving">Diving : </label>
+                        <input type="range" id="diving" name="" min="0" max="100"  step="10"/>
+                        <label for="Handling">Handling : </label>
+                        <input type="range" id="handling" name="" min="0" max="100"  step="10"/>
+                        <label for="kicking">Kicking : </label>
+                        <input type="range" id="kicking" name="" min="0" max="100"  step="10"/>
+                        <label for="reflexes">Reflexes : </label>
+                        <input type="range" id="reflexes" name="" min="0" max="100"step="10"/>
+                        <label for="speed">speed : </label>
+                        <input type="range" id="speed" name="" min="0" max="100" step="10"/>
+                        <label for="positioning">positioning : </label>
+                        <input type="range" id="positioning" name="" min="0" max="100" step="10"/>` 
+                        document.getElementById("switchposition").innerHTML = positongk 
+    }
+}
+let playeronobject ;
+document.getElementById("addplayer").addEventListener("click",function(e){
+   e.preventDefault();
+    if(document.getElementById("positionshowsed").value == "GK"){
+     playeronobject = {
+        
+        "name": document.getElementById("name").value ,
+        "photo": document.getElementById("playerimage").value,
+        "position": document.getElementById("positionshowsed").value,
+        "nationality": "",
+        "flag": document.getElementById("playerflag").value,
+        "club": "",
+        "logo": document.getElementById("playerflag").value,
+        "rating": document.getElementById("rating").value,
+        "diving":  document.getElementById("diving").value ,
+        "handling": document.getElementById("handling").value,
+        "kicking": document.getElementById("kicking").value,
+        "reflexes": document.getElementById("reflexes").value,
+        "speed": document.getElementById("speed").value ,
+        "positioning": document.getElementById("positioning").value
+    }
+}
+    else {
+        playeronobject = {
+        "name": document.getElementById("name").value ,
+        "photo": document.getElementById("playerimage").value,
+        "position": document.getElementById("positionshowsed").value,
+        "nationality": "",
+        "flag": document.getElementById("playerflag").value,
+        "club": "",
+        "logo": document.getElementById("playerflag").value,
+        "rating": document.getElementById("rating").value,
+        "pace": document.getElementById("pace").value,
+        "shooting":document.getElementById("shooting").value,
+        "passing": document.getElementById("passing").value,
+        "dribbling": document.getElementById("dribbling").value,
+        "defending": document.getElementById("defending").value,
+        "physical": document.getElementById("physical").value
+        }
+
+    }
+    array.push(playeronobject)
+
+
+
+        console.log(playeronobject)
+})
 
 document.onload(gettactic()) 
