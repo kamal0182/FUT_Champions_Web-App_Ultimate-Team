@@ -2,11 +2,16 @@ body {
   background-color: #101021;
   color: white;
 }
+.close-icon {
+  cursor: pointer;
+}
+.close-icon:hover {
+  color: red;
+}
 .area-container {
   display: grid;
-  grid-template-columns: 1100px 1fr;
-  
-  
+  grid-template-columns: 1fr  400px;
+  margin: 0 auto;
 }
 .contenteimage {
   display: flex;
@@ -20,56 +25,131 @@ body {
   grid-template-rows: 1fr 1fr;
   justify-content: center;
 }
-
-/* .iconcontainer {    
-    width: 300px;
-    height: auto;
-    color: gold;
-    background-color: yellow;
-    font-weight: bold;
-    position: relative;  
-} */
-/* .power {
-    display: grid;
-    grid-template-columns: repeat(7,1fr) ;
-    column-gap: 10px;
-   
-} */
-/* .imgteam {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 1px;
-    place-items: center;
-    place-content: center;
-} */
-.stadium {
-  display: flex;
-  justify-content: center;
-}
 .switchedimage:hover {
   /* box-shadow : 2px 2px 4px rgb(205, 187, 187) ;  */
   filter: drop-shadow(0 2px 13px rgba(182, 152, 152, 0.51))
     drop-shadow(0 -2px 5px rgba(201, 174, 174, 0.485));
 }
 .erea {
-    /* margin: 0 auto; */
+
   background-color: green;
   background-repeat: no-repeat;
   border-radius: 20px;
+  padding-left: 15px ;
+  padding-right: 10px;
  
-  /* box-sizing: border-box; */
+  
   display: grid;
 
   grid-template-columns: repeat(7, 1fr);
   grid-template-rows: repeat(4,1fr);
-  width: 1030px;
+  width: 1050px;
   grid-template-areas:
     "b rf stb  st sta lf mon"
       "LW    ko cmfr  cmfc cmfl cmfb1  RW"
     "lb     cbc cba    cb1  cbb  jrb RB"
-    "hj jh gk1 gk1 gk1 lo rjb";
+    "hj jh gko gk1 kg lo rjb";
 }
+.eria-player-info {
+  display: flex ;
+      flex-direction: column;
+      justify-content: space-between;
+}
+.eria-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.allplayerinfo{
+  height: 50vh;
+  border: solid white 1px;
+  font-size: 20px; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10px;
 
+
+}
+.power-key{
+  width: 100%;
+  border: 1px solid rgb(100 116 139);
+  color: white;
+  font-size: bold;
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  display: flex;
+  align-items: center;
+
+}
+.power-value{
+  border-bottom: 1px solid white;
+  border-right:  1px solid white ;
+  border-left:  1px solid white ;
+  color: white;
+  font-size: bold;
+  display: flex;
+  justify-content: space-around;
+  /* box-shadow: 0px 0px 5px green; */
+  padding: 10px 10px ;
+  color: green;
+  
+  
+
+}
+.player-image {
+  background-color: red;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+}
+.power-value > * {
+  text-shadow: 0px 4px 5px green;
+  box-shadow: 0px 0px 5px green;
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.position-right {
+  text-align: center;
+  border: 1px solid green;
+  display: inline-block;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px green;
+}
+.postion-power {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.flagimage {
+  display: inline;
+}
+.team-imag{
+  width: 40px;
+  display: inline;
+}
+.imag-player {
+  display: grid;
+  
+
+}
+.player-personnal-image {
+  
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+
+
+}
+.power-info {
+  display: grid;
+  grid-template-rows: 1fr 1fr ;
+}
 .rb,
 .lwf,
 .cmf1,
@@ -84,21 +164,35 @@ body {
   position: relative;
   margin: 0 auto;
 }
-#position {
+#position{
   text-align: center;
   background-color: #374d4a;
-  display: inline-block;
+  border-radius: 70%;
+  box-shadow: 0px 5px 6px black;
+  font-weight: bold;
+  display: flex;
+    justify-content: center;
+    margin-right: 45px;
+}
+
+#position_1 {
+  text-align: center;
+  background-color: #374d4a;
+  
   
   border-radius: 70%;
   box-shadow: 0px 5px 6px black;
   font-weight: bold;
+  display: flex;
+    justify-content: center;
+    margin-right: 8px;
+    
+
 }
-
-
 .plusicon {
   position: absolute;
-  top: 100px;
-  left: 60px;
+  top: 56px;
+  left: 31px;
   width: 100%;
 }
 #changesimg {
@@ -117,60 +211,66 @@ body {
   filter: drop-shadow(0 -5px 7px rgba(184, 241, 210, 0.96))
     drop-shadow(0 8px 5px rgba(199, 224, 247, 0.575));
 }
-.gk {
-text-align: center;
+#gk {
+
   grid-area: gk1;
-  height: 20
-  px;
+  position: relative;
+  width: 150px;
+  
 
 }
 
-.cb1 {
+#cb1 {
   grid-area: cba;
   width: 150px;
+  position: relative;
 
 }
-.cb2 {
+#cb2 {
+  
   grid-area: cbb;
   width: 150px;
-
+  position: relative;
 }
-.rb {
+#rb {
   grid-area: rb;
   width: 150px;
-
+  position: relative;
 }
-.lb {
+#lb {
   grid-area: lb;
   width: 150px;
+  position: relative;
   }
-.cmf1 {
+#cmf1 {
   grid-area: cmfa;
   width: 150px;
+  position: relative;
 }
-.cmf2 {
+#cmf2 {
   grid-area: cmfb;
   width: 150px;
-
+  position: relative;
 }
-.cmf3 {
+#cmf3 {
   grid-area: cmfc;
   width: 150px;
-
+  position: relative;
 }
-.rwf {
+#rwf {
   grid-area: rwf;
   width: 150px;
-
+  position: relative;
 }
-.lwf {
+#lwf {
   grid-area: lwf;
   width: 150px;
-
+  position: relative;
 }
-.st {
+#st {
   grid-area: st;
   width: 150px;
+  position: relative;
 
 }
 
