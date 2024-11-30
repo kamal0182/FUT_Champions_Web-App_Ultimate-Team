@@ -297,25 +297,34 @@ select {
 }
 
 .mainimage {
-    width: 100%;
+    width: 7.5em;
     margin: 0;
     padding: 0; 
 }
   /* padding-bottom: 20px;
 }
 /*/ 
+.button{
+  background-color: blueviolet;
+  border-radius: 8px;
+  padding: 10px 15px ;
+
+}
+.button:hover {
+  background-color: yellow;
+}
 .cardimage {
     width: 6.5em;
 }
 
 .playerimage {
   position: absolute;
-  top: 34px;
-  left: 38px;
-  width: 70%;
-  border-radius: 50%;
+  top: 31px;
+  left: 35px;
+  width: 5.5em;
+  border-radius: 50%
 }
-.addplayertoteam {
+#allplayers , .addplayertoteam {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
@@ -331,11 +340,11 @@ select {
 
 .statistics {
   display: flex;
-  font-size: bold;
+  font-size: 0.6em;
   justify-content: space-evenly;
   position: absolute;
-  top: 135px;
-  left: 18px;
+  top: 119px;
+  left: 14px;
 }
 
 .kamalimage {
