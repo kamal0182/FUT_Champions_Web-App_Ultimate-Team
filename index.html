@@ -11,18 +11,13 @@
   <link rel="stylesheet" href="./src/players.json">
   <body>
     <div>
-      <nav>
-        <ul>
-          <li>Squad Builder</a></li>
-          <li> <a href="./Players.html">Players</a></li>
-        </ul>
-      </nav>
+         <h1 class="logo">YOUNES ULTIMATE TEAM</h1>
     </div>
     <!--  -->
     <div class="area-container" >
    
         <div class="erea">
-          <div id="gk" class="gk">
+          <div id="gk" class="player">
               <img class="cardimage" src="./src/assets/Icons/placeholder-card-normal.png" alt="" onclick="showselectedplayer(this)">
               <div id="position">GK</div>
              
@@ -31,10 +26,11 @@
               </div>
               
           </div>
-          <div id="cb1" class="player">
+          <div id="cb1" class="player" 
+          >
            
 
-                <img class="cardimage" src="./src/assets/Icons/placeholder-card-normal.png" alt=""  onclick="showselectedplayer(this)">
+                <img class="cardimage" src="./src/assets/Icons/placeholder-card-normal.png" alt=""  onclick="showselectedplayer(this)"  >
                 <div id="position">
                     
                 </div>
@@ -42,8 +38,8 @@
                   <svg class="" width="30%" height="30%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0BB04D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12H12M15 12H12M12 12V9M12 12V15" stroke="#0BB04D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.7 1.1732C11.8856 1.06603 12.1144 1.06603 12.3 1.17321L21.2263 6.3268C21.4119 6.43397 21.5263 6.63205 21.5263 6.84641V17.1536C21.5263 17.3679 21.4119 17.566 21.2263 17.6732L12.3 22.8268C12.1144 22.934 11.8856 22.934 11.7 22.8268L2.77372 17.6732C2.58808 17.566 2.47372 17.3679 2.47372 17.1536V6.84641C2.47372 6.63205 2.58808 6.43397 2.77372 6.32679L11.7 1.1732Z" stroke="#0BB04D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
               </div>
           </div>
-          <div id="cb2" class="player">
-              <img class="cardimage" src="./src/assets/Icons/placeholder-card-normal.png" alt="" onclick="showselectedplayer(this)">
+          <div id="cb2" class="player" >
+              <img class="cardimage" src="./src/assets/Icons/placeholder-card-normal.png" alt="" onclick="showselectedplayer(this)" >
               <div id="position">
 
               </div>
@@ -83,13 +79,12 @@
           <div id="cmf1" class="player">
               <img class="cardimage" src="../src/assets/Icons/placeholder-card-normal.png" alt="" onclick="showselectedplayer(this)">
               <div id="position">
-                
               </div>
               <div class="plusicon">
                   <svg class="" width="30%" height="30%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0BB04D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12H12M15 12H12M12 12V9M12 12V15" stroke="#0BB04D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.7 1.1732C11.8856 1.06603 12.1144 1.06603 12.3 1.17321L21.2263 6.3268C21.4119 6.43397 21.5263 6.63205 21.5263 6.84641V17.1536C21.5263 17.3679 21.4119 17.566 21.2263 17.6732L12.3 22.8268C12.1144 22.934 11.8856 22.934 11.7 22.8268L2.77372 17.6732C2.58808 17.566 2.47372 17.3679 2.47372 17.1536V6.84641C2.47372 6.63205 2.58808 6.43397 2.77372 6.32679L11.7 1.1732Z" stroke="#0BB04D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
               </div>
           </div>
-          <div id="cmf2" class="player">
+          <div id="cmf2" class="player" >
               <img class="cardimage" src="./src/assets/Icons/placeholder-card-normal.png" alt="" onclick="showselectedplayer(this)">
               <div id="position">
 
@@ -133,8 +128,8 @@
         <div class="eria-info" style="display: none;">
             
              </div >
-             <div class="inputs-info">
-                 <select style="color: black;" name="" id="tactics" onclick="gettactic()">
+             <div class="inputs-info" id="input-info">
+                 <select  name="" id="tactics" onclick="gettactic()">
                      <option value="343" >3-4-3</option>
                      <option value="442">4-4-2</option>
                      <option value="532">5-3-2</option>
@@ -147,12 +142,12 @@
                         <label for="">Player Rating : </label>
                         <input type="number" min="0" name="" id="rating">
                         <label for=""></label>
-                        <label for="Player image">Player image : </label>
+                        <label for="playerimage">Player image : </label>
                         <input type="url" name="" id="playerimage">
                         <label for="">Player flag :</label>
                         <input type="url" name="" id="playerflag">
                         <label for="">Player team :</label>
-                        <input type="url" name="" id="playerteam">
+                        <input type="url" name="" id="playerlogo">
                         <label for="">Select player: </label>
                         <select name="" id="positionshowsed" onclick="position()">
                             <option value="">Position</option>  
@@ -181,7 +176,7 @@
                         <label for="physical"> physical : </label>
                         <input type="range" id="physical" name="" min="0" max="100" step="10"/>  
                     </div>         
-                    <div>
+                    <div id="switchbutton">
                         <button class="added-player" id="addplayer">Add Player</button>
                     </div>            
                     </div>
@@ -198,14 +193,23 @@
   </div>
   <div id="changes" class="changes">
   </div>
-  <div id="addplayertoteam" class="addplayertoteam">
-</div >
-<div id="allplayers">
-
-</div>
-<div>
-    <button onclick="allplayers()">Show all players</button>
+  <div>
+    <h1></h1>
+      <div class="display-all-players">
+          <div id="addplayertoteam"  class="addplayertoteam">
+        </div >
+    </div>
   </div>
+ <div class="display-all-pallayers-found">
+    <h1  onclick="allplayers()" id="showallplayer"> + </h1>
+    <div  id="allplayers">
+    <div class="contain-show-btn-content">
+        <button  >Show all players</button>
+    </div>
+    <div class="contain-show-all">
+    </div>
+    </div></div>
+
  
   <script src="./src/index.js"></script>
   </body>
