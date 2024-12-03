@@ -475,5 +475,16 @@ swal(`${document.getElementById("playerimage").value, document.getElementById("n
 
 
 })
+let players = document.querySelectorAll(".player")
+let counter  = 0;
+players.forEach((ele)=>{
+    if(ele.children[0].id == "selectedplayer"){
+        counter += parseInt(ele.children[0].children[2].children[0].children[0].innerHTML)
+    }
+    })
 
+for (let ele of players){
+   
+}
+console.log(counter/11)
 document.onload(gettactic()) 
