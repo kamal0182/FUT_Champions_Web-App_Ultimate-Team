@@ -10,15 +10,15 @@ body {
   color: red;
 }
 .input { 
-  padding: 15px ;
+  /* padding: 15px ; */
+  border: 1px solid white ;
   
 }
 input {
   background-color: #1C1C2C;
-  padding: 3px ;
-  
+  padding: 5px ;
   color :  white;
-  border: 1px solid black;
+  border: 1px solid white;
   border-radius: 5px;
   display: block;
   width: 100%;
@@ -30,6 +30,18 @@ input {
   padding: 20px 25px;
   font-size: 2.5em;
   text-align: center;
+}
+.deletebtn{
+  padding: .7rem 1rem;
+  background-color: #f43f5e;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.modifybtn {
+  padding: .7rem 1rem;
+  background-color: yellow;
+  border-radius: 12px
 }
 #tactics {
 
@@ -53,7 +65,7 @@ width: 100%;
   width: 100%;
   text-align:  center;
 }
-#addplayer {
+#addplayer  {
   margin-top: 10px;
   background-color: #1C1C2C;
   padding: 5px 13px;
@@ -108,18 +120,20 @@ width: 100%;
 
 .allplayerinfo{
   height: 50vh;
-  border: solid white 1px;
-  font-size: 20px; 
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+
+
+ 
+  width: 90%;
+  display: grid;
+
+  align-items: center;
   justify-content: center;
-  margin-right: 10px;
+ 
 
 
 }
 .power-key{
-  width: 100%;
+  
   border: 1px solid rgb(100 116 139);
   color: white;
   font-size: bold;
@@ -127,7 +141,7 @@ width: 100%;
   justify-content: space-around;
   background-color: black;
   display: flex;
-  align-items: center;
+
 
 }
 .power-value{
@@ -186,7 +200,12 @@ width: 100%;
   display: inline;
 }
 .imag-player {
-  display: grid;
+  display: flex;
+  align-items:  center;
+  width: 100%;
+  background-color: red
+  te
+  ;
   
 
 }
@@ -454,17 +473,24 @@ width: 100%;
     display: grid;
     
     
-  
-    /* grid-template-columns: repeat(, 99px); */
+
     grid-template-rows: repeat(4,1fr);
    height: 100vh;
     
     grid-template-areas:
-      "b rf stb  st sta lf mon"
-        "LW    ko cmfr  cmfc cmfl cmfb1  RW"
-      "lb     cbc cba  cb1  cbb  jrb RB"
+      "b rf stb st sta lf mon"
+        "LW  ko cmfr cmfc cmfl cmfb1  RW"
+      "lb cbc cba  cb1  cbb  jrb RB"
       "hj jh gko gk1 kg lo rjb";
   }
+
+#position_1{
+  display: none;
+}
+.plusicon {
+  display: none;  
+}
+
   #gk {
 
     grid-area: gk1;

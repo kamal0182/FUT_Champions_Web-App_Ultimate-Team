@@ -12,8 +12,6 @@ let atack = document.getElementById("st")
 let gk  = document.getElementById("gk")
 function gettactic() {
     let tactic = document.getElementById("tactics").value;
-
-    
     if(tactic == "433"){
         gk.style.gridArea = "gk1"
         cbleft.style.gridArea = "cba"
@@ -70,17 +68,13 @@ function gettactic() {
             let playerposition  = document.querySelectorAll(".player")
             console.log(document.querySelectorAll(".player"))
             for(let ele of playerposition){
-              
                 if(ele.children[0].id == "selectedplayer") { 
+                   
+                    
 
                     if(ele.style.gridArea.slice(0,2).toUpperCase() != ele.children[0].children[2].children[0].children[1].innerHTML){
                     
-                    console.log({
-                        found : true ,
-                        gridArea : ele.style.gridArea.slice(0,2).toUpperCase()   ,
-                        ele : ele.children[0].children[2].children[1].children[0].innerHTML 
-                    }) 
-                    console.log({idfound : ele.children[0].id})
+                    
                   
                     const paneLWarning = document.createElement("div");
                     paneLWarning.classList.add("pwarning");
@@ -91,9 +85,7 @@ function gettactic() {
                else{
                     let awrningExist = ele.children[0].children[2].children[1].querySelectorAll('.pwarning');
                     Array.from(awrningExist).forEach(item=>item.innerHTML = ``)
-                    console.log({awrningExist : awrningExist ,
-                        player : ele.children[0].children[2].children[1].children[0].innerHTML
-                    })
+                    
                }
             }
         }
@@ -106,51 +98,7 @@ function showplayers(playersinfo){
      array = playersinfo
      console.log(array)
 }    
-        
-    //     let jsoninfoplayer  = `   <div class="imageinfocontainer">
-    //     <img class="mainimage" src="./src/assets/Icons/badge_total_rush.webp" alt="">
-    //     <img class="playerimage"  src="${ele.photo}" alt="">
-    //     <div class="allinfoplayer">
-    //         <div class="playerpower">
-    //             <h1>${ele.rating}</h1>
-    //             <p>${ele.position}</p>
-    //             <h2>+++</h2>
-    //         </div>
-    //         <div class="statistics">
-    //             <div>
-    //                 <h3>${ele.passing ? "PAS" : "DIV"}</h3>
-    //                 <h4>${ele.pace || ele.diving}</h4>
-    //             </div>
-    //             <div>
-    //                 <h3>${ele.defending ? "SHO" : "HAN"}</h3>
-    //                 <h4>${ele.shooting || ele.handling}</h4>
-    //             </div>
-    //             <div>
-    //                 <h3>${ele.defending ? "PAS" : "KIC"}</h3>
-    //                 <h4>${ele.passing ||ele.kicking}</h4>
-    //             </div>
-    //             <div>
-    //                 <h3>${ele.defending ? "DRI" : "REF"}</h3>
-    //                 <h4>${ele.dribbling ||ele.reflexes}</h4>
-    //             </div>
-    //             <div>
-    //                 <h3>${ele.defending ? "DEF" : "SPE"}</h3>
-    //                 <h4>${ele.defending ||ele.speed}</h4>
-    //             </div>
-    //             <div>
-    //                 <h3>${ele.diving ? "PHY" : "POS"}</h3>
-    //                 <h4>${ele.positioning || ele.physical}</h4>
-    //             </div>   
-    //         </div>
-    //         <div class="kamalimage">
-    //             <img class="kamal" src="${ele.flag}" alt="">
-    //             <img class="kamal" src=""${ele.logo}"" alt="">
-                
-    //         </div> 
-    //     </div>    
-    // <div>
-    // </div>
-    // </div>`
+
 function allplayers(){
     
     document.getElementById("allplayers").innerHTML  = ""
@@ -171,8 +119,8 @@ function allplayers(){
                             </div>
                             </div>
                             <div>
-                            <button class="button" href="#eria-player-info" onclick="modification1(this)">moddify</button>
-                            <button class="button" onclick="deleteplayer2(this)">delete</button>
+                            <button class="modifybtn" href="#eria-player-info" onclick="modification1(this)">moddify</button>
+                            <button class="deletebtn"  onclick="deleteplayer2(this)">delete</button>
                             </div>
                             `
     document.getElementById("allplayers").innerHTML += jsoninfoplayer
@@ -182,16 +130,7 @@ function modification1(namee){
    
     let mynameelement = namee.parentElement.parentElement.children[2].children[1].children[0].innerHTML ; 
   let playerinfo  = array.find(item => item.name == mynameelement)
-//   console.log(playerinfo)
-//     document.getElementById("name").value = playerinfo.name
-//     document.getElementById("playerimage").value = playerinfo.photo
-//     document.getElementById("positionshowsed").value = playerinfo.position
-//     document.getElementById("playerflag").value = playerinfo.flag
-//     document.getElementById("rating").value = playerinfo.rating
-//     document.getElementById("handling").value = playerinfo.handling
-//     document.getElementById("kicking").value = playerinfo.kicking
-//     document.getElementById("reflexes").value  = playerinfo.reflexes
-//     document.getElementById("positioning").value = playerinfo.positioning  
+
     document.getElementById("name").value =  playerinfo.name
     document.getElementById("playerimage").value = playerinfo.photo
     document.getElementById("positionshowsed").value = playerinfo.position
@@ -207,25 +146,55 @@ function modification1(namee){
     let modifybutton = `<button id="modify"  class="modify-Btn">Modify</button>`
     document.getElementById("switchbutton").innerHTML = modifybutton
     document.getElementById("modify").addEventListener("click",function(e){
-               e.preventDefault();
-                       
+        e.preventDefault();
+        let modifybutton = `<button class="added-player" id="addplayer">Add Player</button>`
+        document.getElementById("switchbutton").innerHTML = modifybutton
+        if(document.getElementById("positionshowsed").value == "GK"){
+                playerinfo.name   =  document.getElementById("name").value ;
+                playerinfo.position = document.getElementById("positionshowsed").value ;
+                playerinfo.photo  =  document.getElementById("playerimage").value;
+                playerinfo.flag  = document.getElementById("playerflag").value;
+                playerinfo.logo   =  document.getElementById("playerlogo").value ; 
+                playerinfo.rating = document.getElementById("rating").value;
+                playerinfo.shooting =  document.getElementById("diving").value ;
+                playerinfo.passing =  document.getElementById("passing").value;
+                playerinfo.dribbling =  document.getElementById("dribbling").value;
+                playerinfo.defending =  document.getElementById("defending").value;
+                playerinfo.physical =  document.getElementById("physical").value;
+                swal(`${playerinfo.name}`, "Modified  Succesfully");
+                            
+            }
+            else {
 
-               playerinfo.name   =  document.getElementById("name").value ;
-               playerinfo.position = document.getElementById("positionshowsed").value ;
+                
+                playerinfo.name   =  document.getElementById("name").value ;
+                playerinfo.position = document.getElementById("positionshowsed").value ;
                playerinfo.photo  =  document.getElementById("playerimage").value;
                playerinfo.flag  = document.getElementById("playerflag").value;
                playerinfo.logo   =  document.getElementById("playerlogo").value ; 
                playerinfo.rating = document.getElementById("rating").value;
-              
+               
                playerinfo.shooting = document.getElementById("shooting").value;
                playerinfo.passing =  document.getElementById("passing").value;
                playerinfo.dribbling =  document.getElementById("dribbling").value;
                playerinfo.defending =  document.getElementById("defending").value;
                playerinfo.physical =  document.getElementById("physical").value;
-               console.log(playerinfo)
-               let modifybutton = `<button id="modify"  class="modify-Btn">Modify</button>`
-                document.getElementById("switchbutton").innerHTML = modifybutton
-    })
+               swal(`${playerinfo.name}`, "Modified Succesfully");
+               
+            }
+            document.getElementById("name").value = ""
+        document.getElementById("playerimage").value = ""
+        document.getElementById("positionshowsed").value = ""
+        document.getElementById("playerflag").value = ""
+        document.getElementById("playerlogo").value = ""
+        document.getElementById("rating").value = "";
+        document.getElementById("pace").value = 0 ; 
+        document.getElementById("shooting").value = 0  ;
+        document.getElementById("passing").value  = 0 ; 
+        document.getElementById("dribbling").value = 0 ; 
+        document.getElementById("defending").value = 0 ; 
+        document.getElementById("physical").value = 0
+        })
 }
 function deleteplayer2(e){
     e.closest("#selectedplayer").remove()
@@ -283,7 +252,7 @@ function showselectedplayer(element1){
 document.getElementById("addplayertoteam").addEventListener("click",function(e){
             // document.getElementById("addplayertoteam").display  = "none"
             if(selected){
-                let selectedelement = e.target.closest(".imageinfocontainer").children
+                
                 document.getElementById(ele1).innerHTML = ""    
                 document.getElementById(ele1).appendChild(e.target.closest(".imageinfocontainer"))
                 
@@ -305,7 +274,6 @@ document.getElementById("addplayertoteam").addEventListener("click",function(e){
   
 })
 function removeplayerfromstaduim(ele) {
-
     console.log(array.length)
     for(let element of infoarray ){
         if(ele.closest(".player").children[0].children[2].children[1].children[0].innerHTML == element.name){
@@ -320,7 +288,6 @@ function removeplayerfromstaduim(ele) {
                   <svg class="" width="30%" height="30%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#0BB04D"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M9 12H12M15 12H12M12 12V9M12 12V15" stroke="#0BB04D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11.7 1.1732C11.8856 1.06603 12.1144 1.06603 12.3 1.17321L21.2263 6.3268C21.4119 6.43397 21.5263 6.63205 21.5263 6.84641V17.1536C21.5263 17.3679 21.4119 17.566 21.2263 17.6732L12.3 22.8268C12.1144 22.934 11.8856 22.934 11.7 22.8268L2.77372 17.6732C2.58808 17.566 2.47372 17.3679 2.47372 17.1536V6.84641C2.47372 6.63205 2.58808 6.43397 2.77372 6.32679L11.7 1.1732Z" stroke="#0BB04D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
               </div>`
  
-    console.log(array)
   
 
 }
@@ -328,7 +295,6 @@ let draggeditem = document.querySelectorAll(".imageinfocontainer")
 let emptycards  = document.querySelectorAll(".cardimage")          
 let  infoarray = [];
 function deleteplayer(deletitem){
-   
     let  newarray1 = array.filter((item1)=> {
         if(item1.name != deletitem) return item1 ;
         infoarray.push(item1);
@@ -350,7 +316,7 @@ function showmoreinfo(item){
             <h1 class="close-icon" onclick="close1()">X</h1>
             <div class="player-personnal-image">
             <img src="${ele.photo}" alt="" class="player-image">
-            </div>x
+            </div>
             <div class="">
             <div class="postion-power">
             <h1 class="position-right">${ele.position}++</h1>
@@ -362,12 +328,12 @@ function showmoreinfo(item){
             </div>  
             </div>
             <d class="power-info" >
-            <div class="power-key">
-            <p>${ele.passing ? "PAS" : "DIV"}</p>
-            <p>${ele.defending ? "SHO" : "HAN"}</p>
-            <p>${ele.defending ? "PAS" : "KIC"}</p>
-            <p>${ele.defending ? "DRI" : "REF"}</p>
-            <p>${ele.defending ? "DEF" : "SPE"}</p>
+            <div  class="power-key">
+            <p id="stat1">${ele.passing ? "PAS" : "DIV"}</p>
+            <p id="stat2">${ele.defending ? "SHO" : "HAN"}</p>
+            <p id="stat3">${ele.defending ? "PAS" : "KIC"}</p>
+            <p id="stat4">${ele.defending ? "DRI" : "REF"}</p>
+            <p id="stat5">${ele.defending ? "DEF" : "SPE"}</p>
             <p>${ele.diving ? "PHY" : "POS"}</p>
             </div>
             <div class="power-value">
@@ -387,15 +353,14 @@ function showmoreinfo(item){
 
     }
 }
-function validation(playername){
-    namapatern = ''
-    
+function validationname(playername){
+    namapatern = /^[a-z A-Z]+[a-z A-Z]+$/
+    if(namapatern.test(playername)) return true 
 }
-
-
-
-
-
+function validaturl(playerurl){
+    let urlpatern = /^(https?:\/\/[^"']*\.(?:png|jpg|jpeg|gif|svg))$/;
+    if(urlpatern.test(playerurl)) return true 
+}
 function close1(){
     document.querySelector(".eria-info").style.display = "none"
     document.querySelector(".inputs-info").style.display = "block"
@@ -438,8 +403,12 @@ function position() {
 let playeronobject ;
 document.getElementById("addplayer").addEventListener("click",function(e){
    e.preventDefault();
+   if(validationname(document.getElementById("name").value)== true){
+    if(validaturl(document.getElementById("playerimage").value) == true ||validaturl(document.getElementById("playerflag").value) == true || validaturl(document.getElementById("playerlogo").value) == true )  {
+        if(document.getElementById("rating").value > 0 && document.getElementById("rating").value <= 100){
+            if(document.getElementById("positionshowsed").value !=  ""){
     if(document.getElementById("positionshowsed").value == "GK"){
-        // if(validation(document.getElementById("name").value)){
+       
      playeronobject = {
         "name": document.getElementById("name").value ,
         "photo": document.getElementById("playerimage").value,
@@ -447,7 +416,7 @@ document.getElementById("addplayer").addEventListener("click",function(e){
         "nationality": "",
         "flag": document.getElementById("playerflag").value,
         "club": "",
-        "logo": document.getElementById("playerflag").value,
+        "logo": document.getElementById("playerlogo").value,
         "rating": document.getElementById("rating").value,
         "diving":  document.getElementById("diving").value ,
         "handling": document.getElementById("handling").value,
@@ -457,7 +426,7 @@ document.getElementById("addplayer").addEventListener("click",function(e){
         "positioning": document.getElementById("positioning").value,
         
     }
-} 
+}
     else {
         playeronobject = {
         "name": document.getElementById("name").value ,
@@ -475,14 +444,36 @@ document.getElementById("addplayer").addEventListener("click",function(e){
         "defending": document.getElementById("defending").value,
         "physical": document.getElementById("physical").value,
         
-        }
+       
+} 
     
-}
+      
+swal(`${document.getElementById("playerimage").value, document.getElementById("name").value}`, "Added  Succesfully");
+    
+    console.log(playeronobject)
     array.push(playeronobject)
+}
+
+   }
+}
+}
+  document.getElementById("name").value = ""
+        document.getElementById("playerimage").value = ""
+        document.getElementById("positionshowsed").value = ""
+        document.getElementById("playerflag").value = ""
+        document.getElementById("playerlogo").value = ""
+        document.getElementById("rating").value = "";
+        document.getElementById("pace").value = 0 ; 
+        document.getElementById("shooting").value = 0  ;
+        document.getElementById("passing").value  = 0 ; 
+        document.getElementById("dribbling").value = 0 ; 
+        document.getElementById("defending").value = 0 ; 
+        document.getElementById("physical").value = 0;
+
+}
 
 
 
-        console.log(playeronobject)
 })
 
 document.onload(gettactic()) 
