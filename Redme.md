@@ -24,11 +24,8 @@ La planification des tâches est gérée sur Jira. Vous pouvez consulter les dé
 
 ## 🗓️ Site Web  
 [**Accéder au Site Web**](# FUT-Champions-Web-App-Ultimate-Team
-
 # Présentation du Projet
-
 Bienvenue dans ce projet ! Ce document vous fournit un aperçu des ressources importantes associées à Mon travail.
-
 ---
 
 ## 📊 Présentation du Projet

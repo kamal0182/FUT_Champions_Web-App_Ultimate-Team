@@ -201,13 +201,15 @@ width: 100%;
 }
 .imag-player {
   display: flex;
-  align-items:  center;
-  width: 100%;
-  background-color: red
-  te
-  ;
+
   
 
+  justify-content: center;
+  
+
+}
+.flagimage{
+  width: 2.5em;
 }
 .player-personnal-image {
   

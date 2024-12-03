@@ -204,10 +204,10 @@ let selected = false ;
 let all1 ;
 let ele1 ;
 let postionforplayer;
+console.log(array)
 function showselectedplayer(element1){
     
    
-
 
     ele1 = element1.parentElement.id   
     postionforplayer = element1.parentElement
@@ -322,8 +322,8 @@ function showmoreinfo(item){
             <h1 class="position-right">${ele.position}++</h1>
             </div>
             <div class="imag-player">
-            <img src="${ele.flag}" alt="flagimage" class="flagimage">
-            <img src="${ele.club}" alt="teamimage" class="team-imag">
+            <img class="flagimage" src="${ele.flag}" alt="flagimage" class="flagimage">
+           
             </div>
             </div>  
             </div>
