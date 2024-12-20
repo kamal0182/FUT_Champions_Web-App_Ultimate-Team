@@ -75,7 +75,7 @@
             <img class="club-image" src="<?php echo $club['logo'];?>" alt="">
             <p class="club-name"><?php echo $club['club_name']  ; ?></p>
             <h1>X</h1>
-        </div> <?php }?>
+        </div> <?php } ?>
        </div>
        <div class="nationalities">
        <?php  foreach($nationalities as $natinalitie){ ?>
@@ -83,19 +83,17 @@
             <img class="nationalitie-image"  onclick="showplayernatio(this)" src="<?php echo $natinalitie['flag'];?>" alt="">
             <p class="nationalitie-name"><?php echo $natinalitie['natio_name']  ;?></p>
           
-        </div> <?php   } ?>
+        </div> <?php } ?>
     
        </div>
        <div id="players-natio">
         <?php 
         foreach($playersAll as $player){ ?>
             <div class="playerInfo"><div class="playername"> <img class="player-image1" src="<?php echo $player['photo']?>" alt="">
-             <h4><?php  echo $player['name'];?></h4> </div> <h4 class="position" ><?php echo $player['position_player'] ?></h4>
+             <h4 class="textinfo"><?php  echo $player['name'];?></h4> </div> <h4 class="position" ><?php echo $player['position_player'] ?></h4>
          <img class="club-image1" src="<?php echo $player['logo']?>" alt=""></div>
         <?php } ?>
         <!-- Button trigger modal -->
-
-
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -138,7 +136,7 @@ function addnationality(){
          
            
       
-  // }
+
 }
 
 ?>
@@ -229,7 +227,7 @@ function addnationality(){
             document.getElementById("players-natio").innerHTML = 
             `<div class="playerInfo"><div class="playername"> 
             <img class="club-image1" src="<?php echo $player['photo']?>" alt="">
-             <h4><?php  echo $player['name'];?></h4> </div> <h4 class="position" >
+             <h4 class="textinfo"><?php  echo $player['name'];?></h4> </div> <h4 class="textinfo" >
              <?php echo $player['position_player'] ?></h4>
          <img class="club-image" src="<?php echo $player['logo']?>" alt=""></div>`;
         }

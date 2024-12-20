@@ -65,6 +65,7 @@ select {
     flex-direction: row;
 }
 .position {
+    font-size: 1.1em;
     
     justify-self: center;
 }
@@ -100,6 +101,10 @@ select {
     grid-template-columns: 1fr 1fr;
 
 }
+.textinfo{
+    font-size: 1.2em;
+    align-self: center;
+}
 #boutton {
     font-size: bold ;
 }
@@ -115,7 +120,7 @@ select {
     border-collapse: collapse;
     width: 100%;
   }
-  
+
 #customers td, #customers th {
     border: 1px solid #ddd;
     text-align: center;
