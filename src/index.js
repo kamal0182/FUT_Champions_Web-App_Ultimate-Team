@@ -24,7 +24,6 @@ function gettactic() {
         atackright.style.gridArea = "rf"
         atackleft.style.gridArea = "lf"
         atack.style.gridArea = "st"
-        
     }
      if(tactic == "442"){
         atackright.style.gridArea = "RW"
@@ -33,7 +32,6 @@ function gettactic() {
         lb.style.gridArea = "lb"
         cmcnter.style.gridArea= "sta"
         atack.style.gridArea = "stb" 
-       
     }
    if(tactic == "343"){
                 cmcnter.style.gridArea= "cb1"
@@ -68,19 +66,12 @@ function gettactic() {
             let playerposition  = document.querySelectorAll(".player")
             console.log(document.querySelectorAll(".player"))
             for(let ele of playerposition){
-                if(ele.children[0].id == "selectedplayer") { 
-                   
-                    
-
+                if(ele.children[0].id == "selectedplayer") {
                     if(ele.style.gridArea.slice(0,2).toUpperCase() != ele.children[0].children[2].children[0].children[1].innerHTML){
-                    
-                    
-                  
                     const paneLWarning = document.createElement("div");
                     paneLWarning.classList.add("pwarning");
                     paneLWarning.innerHTML = `<spam class="warning">!!!</spam>`
                     ele.children[0].children[2].children[1].appendChild(paneLWarning)
-                    // document.getElementById(ele.children[0].id).innerHTML += 
                }
                else{
                     let awrningExist = ele.children[0].children[2].children[1].querySelectorAll('.pwarning');
@@ -113,8 +104,8 @@ function allplayers(){
                             <h2>+++</h2>
                             </div>
                             <div class="statistics">
-                            <h1>${ele.name}</h1> 
-                            </div> 
+                            <h1>${ele.name}</h1>
+                            </div>
                             <div>
                             </div>
                             </div>

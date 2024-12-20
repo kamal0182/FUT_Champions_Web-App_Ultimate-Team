@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Irish+Grover&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Hanken Grotesk';
+    
+    margin: 0 ;
+    padding: 0;
+}
+
+.container{
+    display: grid ; 
+    grid-template-columns: 1fr 1fr  1fr 1fr ;
+    column-gap: 15px ;
+    
+}
+.club {
+    
+}
+input{
+    width: 100%;
+}
+select {
+    width: 100%;
+}
+.club-image , .nationalitie-image {
+    width: 2em ;
+}
+.club-name,.nationalitie-name{
+    font-size: 1.1em;
+}
+.club-image1{
+    width: 3em ;
+}
+.player-image1 {
+    height: 4em ;
+    border-radius: 50%;
+}
+.playerInfo{
+    display: grid;
+    grid-template-columns: 2.5fr 1fr  1fr;
+    align-items: center;
+    
+}
+.the-club,.the-nationalitie{
+    display: grid ;
+    grid-template-columns: 100px 1fr ;
+    padding-left: 16px   ;
+    box-shadow: 0px 2px 3px rgb(123 78 78);
+    justify-items:  start;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.tags {
+    
+    padding: 10px;
+}
+
+.Dashboard {
+    font-size: 3em;
+    color:   #454545;
+    padding: 30px;
+    box-shadow: 1px 4px 8px rgb(123 78 78);
+}
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+}
+.position {
+    
+    justify-self: center;
+}
+.playername{
+    display: flex;
+    justify-content: space-evenly;
+}
+/* .nationalities {
+    box-shadow: 5px 5px 8px rgb(43, 41, 41);
+} */
+.admin {
+    box-shadow: 0 4px  10px rgb(123 78 78);
+    background-color: white;
+
+    
+    color: black;
+    margin: 0;
+    border-radius: 5px;
+    
+
+}
+.team1image{
+    height: 8em;
+}
+.textadmin {
+    font-weight: bold;
+    padding: 10px;
+    
+}
+.Dash-nav > *  {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+#boutton {
+    font-size: bold ;
+}
+.smallcontainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+/* adfasf */
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  #customers tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #customers tr:hover {background-color: #ddd;}
+  
+  #customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }
+.full-container{
+    display: grid;
+    grid-template-columns: 200px 1fr ;
+}
+.allcalcullinfo {
+    display:  grid;
+    grid-template-columns: repeat(4,1fr );
+    column-gap: 10px;
+    
+}
+.allcalcullinfo > *{
+    background-color: red;
+    border-radius: 10px ;
+    width: 100%;
+ 
+    margin-bottom: 10px;
+    
+}
+.counted-value {
+    font-size : 6em;
+    text-align: end;
+}
